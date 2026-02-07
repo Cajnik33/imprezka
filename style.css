@@ -1,89 +1,53 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
 body {
     margin: 0;
     min-height: 100vh;
-    font-family: "Segoe UI", sans-serif;
-    background: linear-gradient(-45deg, #ff6a00, #ee0979, #7f00ff, #00c6ff);
-    background-size: 400% 400%;
-    animation: gradientBG 12s ease infinite;
-
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
 .card {
     background: white;
-    padding: 40px;
+    padding: 30px;
+    max-width: 400px;
+    width: 90%;
     border-radius: 20px;
-    width: 350px;
     text-align: center;
-    box-shadow:
-        0 0 20px rgba(255, 215, 0, 0.6),
-        0 20px 40px rgba(0,0,0,0.3);
-    border: 3px solid gold;
-    position: relative;
-    z-index: 1;
-}
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
 }
 
-
-h1 {
-    margin-bottom: 20px;
+.center {
+    text-align: center;
 }
 
-input[type="text"] {
+input {
     width: 100%;
     padding: 12px;
     font-size: 16px;
+    margin-bottom: 15px;
     border-radius: 10px;
     border: 1px solid #ccc;
-    margin-bottom: 20px;
 }
 
 button {
-    padding: 12px 25px;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
     border: none;
     border-radius: 12px;
-    background: #667eea;
-    color: white;
-    font-size: 16px;
+    margin-top: 10px;
     cursor: pointer;
+    background: #ff477e;
+    color: white;
 }
 
 button:hover {
-    background: #5a67d8;
+    opacity: 0.9;
 }
 
-.choice {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.choice button {
-    flex: 1;
-}
-
-.age {
-    font-size: 40px;
-    animation: pulse 1.5s infinite;
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
-}
-#confetti-container {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 0;
-}
