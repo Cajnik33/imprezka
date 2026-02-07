@@ -7,33 +7,23 @@
 </head>
 <body>
 
-
 <div class="card">
-    <h1>Witaj serdecznie {{ name }}! 🎉</h1>
+    <h1 id="welcome"></h1>
 
     <p>
-        Serdecznie zapraszam Cię na moją imprezę osiemnastkową!<br><br>
-
-        Już nie długo odbędzie się ta impreza i cieszyłbym się bardzo z twojej obecności, zawszę to o jeden kompan do picia więcej.<br><br>
-
-        Wszystkie potrzebne informacje znajdują się poniżej więc nie musisz się martwić o to<br><br>
-
-        📍 <b>Lokalizacja:</b> OSP Bieńkowice<br>
-        📅 <b>Data i Czas:</b> 2 Maja 2026<br>
-        🕒 <b>Godzina:</b> 19:00
+        Mam ogromną przyjemność zaprosić Cię na moje <b>18 urodziny 🎂</b><br><br>
+        📍 Miejsce: Dom / Sala XYZ<br>
+        📅 Data: 12.07.2026<br>
+        ⏰ Godzina: 18:00
     </p>
 
     <form action="https://formspree.io/f/xjgevoza" method="POST">
-
-        <input type="hidden" name="name" value="hiddenName">
-
+        <input type="hidden" name="name" id="hiddenName">
         <input type="hidden" name="_redirect"
-               value="">
+               value="/thanks.html">
 
-        <div class="choice">
-            <button type="submit" name="presence" value="Będę">Pewnie że przyjdę :)</button>
-            <button type="submit" name="presence" value="Nie będzie mnie">Jednak się nie pojawię :(</button>
-        </div>
+        <button type="submit" name="attendance" value="BĘDĘ">✅ Będę!</button>
+        <button type="submit" name="attendance" value="NIE BĘDĘ">❌ Nie będę</button>
     </form>
 </div>
 

@@ -3,20 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>Zaproszenie</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="card">
-    <h1>✨ Zaproszenie ✨</h1>
-    <h2 class="age">18 🎉</h2>
+<div class="card center">
+    <h1>🎉 Zaproszenie 🎉</h1>
+    <p>Wpisz swoje imię</p>
 
-    <form method="post">
-        <input type="text" name="name" placeholder="Podaj Swoje Imię" required>
-        <button type="submit">Otwórz Zaproszenie</button>
-    </form>
-
+    <input id="nameInput" type="text" placeholder="Twoje imię">
+    <button onclick="goInvite()">Dalej ➜</button>
 </div>
+
+<script>
+function goInvite() {
+    const name = document.getElementById("nameInput").value.trim();
+    if (!name) {
+        alert("Wpisz imię 🙂");
+        return;
+    }
+    window.location.href = "invite.html?name=" + encodeURIComponent(name);
+}
+</script>
 
 </body>
 </html>
